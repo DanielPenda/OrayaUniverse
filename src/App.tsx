@@ -6,6 +6,8 @@ import { CustomOrderCTA } from './components/CustomOrderCTA';
 import { FAQSection } from './components/FAQSection';
 import { FloatingCart } from './components/FloatingCart';
 import { Hero } from './components/Hero';
+import { Header } from './components/Header';
+import { InstallPrompt } from './components/InstallPrompt';
 import { MenuSection } from './components/MenuSection';
 import { ReviewsSection } from './components/ReviewsSection';
 import { WhatsAppFloatingButton } from './components/WhatsAppFloatingButton';
@@ -17,6 +19,7 @@ function AppContent() {
   return (
     <CartProvider>
       <div className="min-h-screen text-cocoa">
+        <Header />
         <Hero />
         <main className="safe-bottom">
           <CategoryGrid />
@@ -46,6 +49,7 @@ function AppContent() {
         </main>
         <WhatsAppFloatingButton />
         <FloatingCart />
+        <InstallPrompt />
         <BottomNav />
       </div>
     </CartProvider>

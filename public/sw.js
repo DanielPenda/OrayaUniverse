@@ -1,12 +1,20 @@
-const CACHE_NAME = 'oraya-universe-v1';
-const APP_SHELL = [
-  '/',
-  '/index.html',
-  '/manifest.webmanifest',
-  '/icons/icon.svg',
-  '/icons/icon-192.svg',
-  '/icons/icon-512.svg',
+const CACHE_NAME = 'oraya-universe-v2';
+const scopeUrl = new URL(self.registration.scope);
+const appShellPaths = [
+  './',
+  'index.html',
+  'manifest.json',
+  'OrayaIcones/oraya-icon.svg',
+  'OrayaIcones/oraya-logo-horizontal.svg',
+  'OrayaIcones/oraya-icon-16.png',
+  'OrayaIcones/oraya-icon-32.png',
+  'OrayaIcones/oraya-icon-152.png',
+  'OrayaIcones/oraya-icon-180.png',
+  'OrayaIcones/oraya-icon-192.png',
+  'OrayaIcones/oraya-icon-512.png',
 ];
+const APP_SHELL = appShellPaths.map((path) => new URL(path, scopeUrl).toString());
+const INDEX_URL = new URL('index.html', scopeUrl).toString();
 
 self.addEventListener('install', (event) => {
   event.waitUntil(caches.open(CACHE_NAME).then((cache) => cache.addAll(APP_SHELL)));
@@ -49,7 +57,7 @@ self.addEventListener('fetch', (event) => {
 
           return response;
         })
-        .catch(() => caches.match('/index.html'));
+        .catch(() => caches.match(INDEX_URL));
     }),
   );
 });

@@ -1,8 +1,6 @@
-import { BRAND } from '../config/brand';
 import { useLanguage } from '../context/LanguageContext';
 import { products } from '../data/products';
 import { ArrowDown, CheckCircle2, MessageCircle } from './icons';
-import { LanguageToggle } from './LanguageToggle';
 
 export function Hero() {
   const heroImages = products.filter((product) => product.featured).slice(0, 3);
@@ -10,26 +8,8 @@ export function Hero() {
 
   return (
     <header id="home" className="relative overflow-hidden">
-      <nav className="hidden border-b border-orange-100/80 bg-linen/80 px-6 py-4 backdrop-blur md:block">
-        <div className="mx-auto flex max-w-6xl items-center justify-between">
-          <a className="text-lg font-black tracking-wide text-cocoa" href="#home">
-            {BRAND.name}
-          </a>
-          <div className="flex items-center gap-6 text-sm font-bold text-truffle/80">
-            <a href="#menu">{t('navMenu')}</a>
-            <a href="#boxes">{t('navBoxes')}</a>
-            <a href="#custom-orders">{t('navCustom')}</a>
-            <a href="#contact">{t('navContact')}</a>
-            <LanguageToggle />
-          </div>
-        </div>
-      </nav>
-
-      <div className="mx-auto grid min-h-[88svh] max-w-6xl items-center gap-8 px-4 pb-12 pt-6 sm:px-6 md:grid-cols-[0.95fr_1.05fr] md:pb-16 md:pt-12">
+      <div className="mx-auto grid min-h-[88svh] max-w-6xl items-center gap-8 px-4 pb-12 pt-24 sm:px-6 md:grid-cols-[0.95fr_1.05fr] md:pb-16 md:pt-28">
         <div className="relative z-10">
-          <div className="mb-4 flex justify-end md:hidden">
-            <LanguageToggle />
-          </div>
           <p className="mb-3 inline-flex rounded-full bg-white px-4 py-2 text-xs font-black uppercase tracking-[0.18em] text-caramel shadow-soft">
             {t('heroEyebrow')}
           </p>
