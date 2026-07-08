@@ -61,6 +61,16 @@ export function ChevronRight(props: IconProps) {
   );
 }
 
+export function Download(props: IconProps) {
+  return (
+    <IconBase {...props}>
+      <path d="M12 3v12" />
+      <path d="m7 10 5 5 5-5" />
+      <path d="M5 21h14" />
+    </IconBase>
+  );
+}
+
 export function Facebook(props: IconProps) {
   return (
     <IconBase {...props}>

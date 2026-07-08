@@ -1,12 +1,13 @@
 import { useCart } from '../context/CartContext';
 import { useLanguage } from '../context/LanguageContext';
-import { Gift, Home, ListOrdered, ShoppingBag } from './icons';
+import { INSTALL_PROMPT_EVENT } from './InstallPrompt';
+import { Download, Gift, ListOrdered, ShoppingBag } from './icons';
 
 export function BottomNav() {
   const { itemCount, openCart } = useCart();
   const { t } = useLanguage();
   const links = [
-    { href: '#home', label: t('navHome'), icon: Home },
+    { href: '#install', label: t('navInstall'), icon: Download },
     { href: '#menu', label: t('navMenu'), icon: ListOrdered },
     { href: '#boxes', label: t('navBoxes'), icon: Gift },
     { href: '#cart', label: t('navCart'), icon: ShoppingBag },
@@ -20,7 +21,10 @@ export function BottomNav() {
             key={label}
             href={href}
             onClick={(event) => {
-              if (href === '#cart') {
+              if (href === '#install') {
+                event.preventDefault();
+                window.dispatchEvent(new CustomEvent(INSTALL_PROMPT_EVENT));
+              } else if (href === '#cart') {
                 event.preventDefault();
                 openCart();
               }

@@ -9,6 +9,7 @@ type BeforeInstallPromptEvent = Event & {
 const DISMISS_KEY = 'oraya-install-prompt-dismissed-at';
 const DISMISS_DAYS = 7;
 const SHOW_DELAY_MS = 3500;
+export const INSTALL_PROMPT_EVENT = 'oraya:request-install';
 
 function isDismissed() {
   const dismissedAt = window.localStorage.getItem(DISMISS_KEY);
@@ -37,7 +38,7 @@ function isIosSafari() {
 export function InstallPrompt() {
   const [deferredPrompt, setDeferredPrompt] = useState<BeforeInstallPromptEvent | null>(null);
   const [ready, setReady] = useState(false);
-  const [dismissed, setDismissed] = useState(false);
+  const [dismissed, setDismissed] = useState(() => isDismissed());
   const iconSrc = `${import.meta.env.BASE_URL}OrayaIcones/oraya-icon-192.png`;
   const showIosInstructions = useMemo(() => {
     if (typeof window === 'undefined') {
@@ -47,11 +48,15 @@ export function InstallPrompt() {
   }, []);
 
   useEffect(() => {
-    if (isStandalone() || isDismissed()) {
+    if (isStandalone()) {
       return;
     }
 
-    const timerId = window.setTimeout(() => setReady(true), SHOW_DELAY_MS);
+    const timerId = window.setTimeout(() => {
+      if (!isDismissed()) {
+        setReady(true);
+      }
+    }, SHOW_DELAY_MS);
     const handleBeforeInstallPrompt = (event: Event) => {
       event.preventDefault();
       setDeferredPrompt(event as BeforeInstallPromptEvent);
@@ -71,10 +76,30 @@ export function InstallPrompt() {
     };
   }, []);
 
+  useEffect(() => {
+    const handleInstallRequest = () => {
+      if (isStandalone()) {
+        return;
+      }
+
+      window.localStorage.removeItem(DISMISS_KEY);
+      setDismissed(false);
+
+      if (deferredPrompt) {
+        void install();
+        return;
+      }
+
+      setReady(true);
+    };
+
+    window.addEventListener(INSTALL_PROMPT_EVENT, handleInstallRequest);
+    return () => window.removeEventListener(INSTALL_PROMPT_EVENT, handleInstallRequest);
+  }, [deferredPrompt]);
+
   function dismiss() {
     window.localStorage.setItem(DISMISS_KEY, String(Date.now()));
     setDismissed(true);
-    setDeferredPrompt(null);
   }
 
   async function install() {
