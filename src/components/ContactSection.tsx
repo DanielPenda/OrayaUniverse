@@ -19,9 +19,9 @@ export function ContactSection() {
             <div className="rounded-2xl bg-white p-4 shadow-soft">
               <div className="mb-2 flex items-center gap-3 font-black text-cocoa">
                 <MapPin className="h-5 w-5 text-caramel" />
-                {BRAND.location}
+                {t('contactLocation')}
               </div>
-              {BRAND.hours.map((item) => (
+              {[t('contactHoursWeekday'), t('contactHoursSunday')].map((item) => (
                 <p key={item} className="text-sm leading-6 text-truffle/75">{item}</p>
               ))}
             </div>

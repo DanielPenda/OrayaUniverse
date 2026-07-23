@@ -4,7 +4,7 @@ export type Language = 'en' | 'fr';
 
 export const languageLabels: Record<Language, string> = {
   en: 'English',
-  fr: 'Francais',
+  fr: 'Français',
 };
 
 export const translations = {
@@ -56,6 +56,9 @@ export const translations = {
     contactEyebrow: 'Contact',
     contactTitle: 'Order, ask, or plan ahead',
     contactCall: 'Call to confirm availability',
+    contactLocation: 'Douala, Cameroon',
+    contactHoursWeekday: 'Monday - Saturday: 8:00 AM - 7:00 PM',
+    contactHoursSunday: 'Sunday: Custom orders by request',
     cartTotal: 'Cart total',
     orderWhatsApp: 'Order on WhatsApp',
     cartReview: 'Review',
@@ -93,8 +96,8 @@ export const translations = {
     navCart: 'Panier',
     languageSwitch: 'EN',
     languageLabel: 'Changer de langue',
-    heroEyebrow: 'Bouchees maison et douceurs',
-    heroTagline: 'Pastels, crepes, cupcakes, mini burgers et boxes gourmandes faits sur commande.',
+    heroEyebrow: 'Bouchées maison et douceurs',
+    heroTagline: 'Pastels, crêpes, cupcakes, mini burgers et boxes gourmandes faits sur commande.',
     heroTrustHomemade: 'Fait maison',
     heroTrustQuick: 'Commande rapide',
     heroTrustWhatsApp: 'Commande WhatsApp',
@@ -103,40 +106,43 @@ export const translations = {
     heroQuestion: 'Poser une question',
     heroImageAlt: 'Plateau maison ORAYA UNIVERSE',
     browseEyebrow: 'Parcourir',
-    browseTitle: 'Choisir une categorie',
+    browseTitle: 'Choisir une catégorie',
     browseViewMenu: 'Voir le menu',
     menuEyebrow: 'Menu',
     menuTitle: 'Composez votre commande',
-    menuCopy: 'Choisissez un format, ajustez les quantites, puis envoyez la commande sur WhatsApp.',
+    menuCopy: 'Choisissez un format, ajustez les quantités, puis envoyez la commande sur WhatsApp.',
     boxesEyebrow: 'Meilleur prix',
     boxesTitle: 'Combo boxes',
-    boxesCopy: 'Assortiments prets pour les fetes, les cadeaux et les commandes decouverte.',
+    boxesCopy: 'Assortiments prêts pour les fêtes, les cadeaux et les commandes découverte.',
     bestValue: 'Meilleur prix',
     addToCart: 'Ajouter',
     customEyebrow: 'Commandes sur mesure',
-    customTitle: 'Une grande table a preparer ?',
+    customTitle: 'Une grande table à préparer ?',
     customCopy:
-      'Les plateaux sur mesure commencent a partir de 30 pieces. Partagez la date, le nombre de personnes et vos envies pour recevoir la bonne selection.',
+      'Les plateaux sur mesure commencent à partir de 30 pièces. Partagez la date, le nombre de personnes et vos envies pour recevoir la bonne sélection.',
     customCta: 'Discuter sur WhatsApp',
-    whyFreshTitle: 'Prepare frais',
-    whyFreshCopy: 'Les petites productions gardent chaque commande chaude, tendre et prete pour vos evenements.',
+    whyFreshTitle: 'Préparé frais',
+    whyFreshCopy: 'Les petites productions gardent chaque commande chaude, tendre et prête pour vos événements.',
     whyFastTitle: 'Commande WhatsApp rapide',
-    whyFastCopy: 'Composez la commande ici, puis envoyez le recapitulatif exact en un geste.',
-    whyFlexibleTitle: 'Quantites flexibles',
-    whyFlexibleCopy: 'Choisissez des formats prets ou discutez de plateaux sur mesure des 30 pieces.',
+    whyFastCopy: 'Composez la commande ici, puis envoyez le récapitulatif exact en un geste.',
+    whyFlexibleTitle: 'Quantités flexibles',
+    whyFlexibleCopy: 'Choisissez des formats prêts ou discutez de plateaux sur mesure dès 30 pièces.',
     reviewsEyebrow: 'Avis',
-    reviewsTitle: 'Adore dans les conversations',
+    reviewsTitle: 'Adoré dans les conversations',
     faqEyebrow: 'FAQ',
-    faqTitle: 'Reponses rapides',
+    faqTitle: 'Réponses rapides',
     contactEyebrow: 'Contact',
     contactTitle: 'Commander, demander, ou planifier',
-    contactCall: 'Appeler pour confirmer la disponibilite',
+    contactCall: 'Appeler pour confirmer la disponibilité',
+    contactLocation: 'Douala, Cameroun',
+    contactHoursWeekday: 'Lundi - samedi : 8 h 00 - 19 h 00',
+    contactHoursSunday: 'Dimanche : commandes sur mesure sur demande',
     cartTotal: 'Total panier',
     orderWhatsApp: 'Commander sur WhatsApp',
-    cartReview: 'Recap',
+    cartReview: 'Récap',
     cartTitle: 'Votre commande',
     cartDone: 'Fermer',
-    cartEmpty: 'Votre panier attend quelque chose de delicieux.',
+    cartEmpty: 'Votre panier attend quelque chose de délicieux.',
     itemsLabel: 'articles',
     comboLabel: 'Combo box',
     decrease: 'Diminuer',
@@ -146,7 +152,7 @@ export const translations = {
     closeCart: 'Fermer le panier',
     galleryOpen: 'Ouvrir la galerie',
     galleryClose: 'Fermer la galerie',
-    galleryPrevious: 'Image precedente',
+    galleryPrevious: 'Image précédente',
     galleryNext: 'Image suivante',
     galleryShow: 'Afficher image',
     whatsappAsk: 'Contacter ORAYA UNIVERSE sur WhatsApp',
@@ -155,7 +161,7 @@ export const translations = {
     orderTotal: 'Total :',
     orderThanks: 'Merci !',
     customMessage:
-      "Bonjour ORAYA UNIVERSE\n\nJe souhaite discuter d'une commande sur mesure de 30 pieces ou plus.\nPouvez-vous me proposer les options, les prix et les disponibilites ?",
+      "Bonjour ORAYA UNIVERSE\n\nJe souhaite discuter d'une commande sur mesure de 30 pièces ou plus.\nPouvez-vous me proposer les options, les prix et les disponibilités ?",
     generalMessage: 'Bonjour ORAYA UNIVERSE, j’ai une question rapide sur votre menu.',
   },
 } as const;
@@ -184,59 +190,59 @@ export const categoryCopy: Record<Category['id'], { name: TextPair; description:
     name: { en: 'Pastels', fr: 'Pastels' },
     description: {
       en: 'Golden savory bites for snacks, parties and platters.',
-      fr: 'Bouchees dorees et salees pour gouters, fetes et plateaux.',
+      fr: 'Bouchées dorées et salées pour goûters, fêtes et plateaux.',
     },
   },
   crepes: {
-    name: { en: 'Crepes', fr: 'Crepes' },
+    name: { en: 'Crepes', fr: 'Crêpes' },
     description: {
       en: 'Soft plain, chocolate and leopard-style crepes.',
-      fr: 'Crepes moelleuses nature, chocolat et leopard.',
+      fr: 'Crêpes moelleuses nature, chocolat et léopard.',
     },
   },
   'mini-burgers': {
     name: { en: 'Mini Burgers', fr: 'Mini burgers' },
     description: {
       en: 'Small party burgers with generous homemade flavor.',
-      fr: 'Petits burgers de fete au gout maison genereux.',
+      fr: 'Petits burgers de fête au goût maison généreux.',
     },
   },
   'croque-monsieur': {
     name: { en: 'Croque Monsieur', fr: 'Croque monsieur' },
     description: {
       en: 'Toasty, cheesy bites for brunch and events.',
-      fr: 'Bouchees grillees et fondantes pour brunchs et evenements.',
+      fr: 'Bouchées grillées et fondantes pour brunchs et événements.',
     },
   },
   cupcakes: {
     name: { en: 'Cupcakes', fr: 'Cupcakes' },
     description: {
       en: 'Simple, soft cupcakes ready for sweet tables.',
-      fr: 'Cupcakes simples et moelleux pour tables sucrees.',
+      fr: 'Cupcakes simples et moelleux pour tables sucrées.',
     },
   },
   'combo-boxes': {
     name: { en: 'Combo Boxes', fr: 'Combo boxes' },
     description: {
       en: 'Curated boxes for sharing and gifting.',
-      fr: 'Boxes composees pour partager ou offrir.',
+      fr: 'Boxes composées pour partager ou offrir.',
     },
   },
   'custom-orders': {
     name: { en: 'Custom Orders', fr: 'Sur mesure' },
     description: {
       en: 'Personalized quantities and event menus from 30 pieces.',
-      fr: 'Quantites et menus personnalises a partir de 30 pieces.',
+      fr: 'Quantités et menus personnalisés à partir de 30 pièces.',
     },
   },
 };
 
 export const productCopy: Record<Product['id'], ProductCopy> = {
   'beef-pastels': {
-    name: { en: 'Beef Pastels', fr: 'Pastels au boeuf' },
+    name: { en: 'Beef Pastels', fr: 'Pastels au bœuf' },
     description: {
       en: 'Crisp homemade pastels filled with seasoned beef.',
-      fr: 'Pastels maison croustillants garnis de boeuf assaisonne.',
+      fr: 'Pastels maison croustillants garnis de bœuf assaisonné.',
     },
     variants: {
       'small-10': { en: 'Small', fr: 'Petit' },
@@ -245,10 +251,10 @@ export const productCopy: Record<Product['id'], ProductCopy> = {
     },
   },
   'plain-crepes': {
-    name: { en: 'Plain Crepes', fr: 'Crepes nature' },
+    name: { en: 'Plain Crepes', fr: 'Crêpes nature' },
     description: {
       en: 'Soft, lightly sweet crepes for breakfast boxes and snacks.',
-      fr: 'Crepes moelleuses et legerement sucrees pour petit dejeuner ou gouter.',
+      fr: 'Crêpes moelleuses et légèrement sucrées pour petit déjeuner ou goûter.',
     },
     variants: {
       '10-pcs': { en: 'Classic pack', fr: 'Format classique' },
@@ -256,10 +262,10 @@ export const productCopy: Record<Product['id'], ProductCopy> = {
     },
   },
   'chocolate-crepes': {
-    name: { en: 'Chocolate Crepes', fr: 'Crepes chocolat' },
+    name: { en: 'Chocolate Crepes', fr: 'Crêpes chocolat' },
     description: {
       en: 'Tender chocolate crepes with a rich cocoa finish.',
-      fr: 'Crepes chocolat tendres avec une note cacao intense.',
+      fr: 'Crêpes chocolat tendres avec une note cacao intense.',
     },
     variants: {
       '10-pcs': { en: 'Classic pack', fr: 'Format classique' },
@@ -267,10 +273,10 @@ export const productCopy: Record<Product['id'], ProductCopy> = {
     },
   },
   'leopard-crepes': {
-    name: { en: 'Leopard Crepes', fr: 'Crepes leopard' },
+    name: { en: 'Leopard Crepes', fr: 'Crêpes léopard' },
     description: {
       en: 'Playful patterned crepes that look beautiful in trays.',
-      fr: 'Crepes a motifs, parfaites pour de beaux plateaux.',
+      fr: 'Crêpes à motifs, parfaites pour de beaux plateaux.',
     },
     variants: {
       '10-pcs': { en: 'Classic pack', fr: 'Format classique' },
@@ -281,29 +287,29 @@ export const productCopy: Record<Product['id'], ProductCopy> = {
     name: { en: 'Mini Burgers', fr: 'Mini burgers' },
     description: {
       en: 'Soft buns, savory patties and party-ready presentation.',
-      fr: 'Pains moelleux, garniture savoureuse et presentation prete pour la fete.',
+      fr: 'Pains moelleux, garniture savoureuse et présentation prête pour la fête.',
     },
     variants: {
       '6-pcs': { en: 'Snack tray', fr: 'Plateau snack' },
-      '12-pcs': { en: 'Party tray', fr: 'Plateau fete' },
+      '12-pcs': { en: 'Party tray', fr: 'Plateau fête' },
     },
   },
   'croque-monsieur': {
     name: { en: 'Croque Monsieur', fr: 'Croque monsieur' },
     description: {
       en: 'Warm, cheesy croque monsieur cut for easy sharing.',
-      fr: 'Croque monsieur chauds et fondants, decoupes pour partager.',
+      fr: 'Croque monsieur chauds et fondants, découpés pour partager.',
     },
     variants: {
       '8-pcs': { en: 'Brunch tray', fr: 'Plateau brunch' },
-      '16-pcs': { en: 'Event tray', fr: 'Plateau evenement' },
+      '16-pcs': { en: 'Event tray', fr: 'Plateau événement' },
     },
   },
   'vanilla-cupcakes': {
     name: { en: 'Vanilla Cupcakes', fr: 'Cupcakes vanille' },
     description: {
       en: 'Soft vanilla cupcakes for birthdays, gifts and dessert tables.',
-      fr: 'Cupcakes vanille moelleux pour anniversaires, cadeaux et tables sucrees.',
+      fr: 'Cupcakes vanille moelleux pour anniversaires, cadeaux et tables sucrées.',
     },
     variants: {
       '6-pcs': { en: 'Half dozen', fr: 'Demi-douzaine' },
@@ -314,42 +320,42 @@ export const productCopy: Record<Product['id'], ProductCopy> = {
 
 export const comboCopy: Record<ComboBox['id'], ComboCopy> = {
   'discovery-box': {
-    name: { en: 'Discovery Box', fr: 'Box decouverte' },
+    name: { en: 'Discovery Box', fr: 'Box découverte' },
     description: {
       en: 'A balanced sampler for first-time orders.',
-      fr: 'Un assortiment equilibre pour une premiere commande.',
+      fr: 'Un assortiment équilibré pour une première commande.',
     },
     contents: {
-      '12 Beef Pastels': { en: '12 Beef Pastels', fr: '12 pastels au boeuf' },
-      '10 Plain Crepes': { en: '10 Plain Crepes', fr: '10 crepes nature' },
+      '12 Beef Pastels': { en: '12 Beef Pastels', fr: '12 pastels au bœuf' },
+      '10 Plain Crepes': { en: '10 Plain Crepes', fr: '10 crêpes nature' },
       '5 Vanilla Cupcakes': { en: '5 Vanilla Cupcakes', fr: '5 cupcakes vanille' },
     },
   },
   'party-starter-box': {
-    name: { en: 'Party Starter Box', fr: 'Box debut de fete' },
+    name: { en: 'Party Starter Box', fr: 'Box début de fête' },
     description: {
       en: 'Savory favorites for small birthdays and family gatherings.',
-      fr: 'Les favoris sales pour petits anniversaires et reunions de famille.',
+      fr: 'Les favoris salés pour petits anniversaires et réunions de famille.',
     },
     contents: {
-      '20 Beef Pastels': { en: '20 Beef Pastels', fr: '20 pastels au boeuf' },
+      '20 Beef Pastels': { en: '20 Beef Pastels', fr: '20 pastels au bœuf' },
       '12 Mini Burgers': { en: '12 Mini Burgers', fr: '12 mini burgers' },
       '8 Croque Monsieur bites': {
         en: '8 Croque Monsieur bites',
-        fr: '8 bouchees croque monsieur',
+        fr: '8 bouchées croque monsieur',
       },
     },
   },
   'sweet-table-box': {
-    name: { en: 'Sweet Table Box', fr: 'Box table sucree' },
+    name: { en: 'Sweet Table Box', fr: 'Box table sucrée' },
     description: {
       en: 'A soft, pretty spread for dessert corners.',
       fr: 'Un assortiment doux et joli pour les coins dessert.',
     },
     contents: {
       '12 Vanilla Cupcakes': { en: '12 Vanilla Cupcakes', fr: '12 cupcakes vanille' },
-      '20 Chocolate Crepes': { en: '20 Chocolate Crepes', fr: '20 crepes chocolat' },
-      '20 Leopard Crepes': { en: '20 Leopard Crepes', fr: '20 crepes leopard' },
+      '20 Chocolate Crepes': { en: '20 Chocolate Crepes', fr: '20 crêpes chocolat' },
+      '20 Leopard Crepes': { en: '20 Leopard Crepes', fr: '20 crêpes léopard' },
     },
   },
 };
@@ -358,22 +364,22 @@ export const reviewCopy = [
   {
     name: 'Nadia M.',
     en: 'The pastels arrived warm and disappeared in minutes. The WhatsApp order summary made it so easy.',
-    fr: 'Les pastels sont arrives chauds et ont disparu en quelques minutes. Le recap WhatsApp etait tres pratique.',
+    fr: 'Les pastels sont arrivés chauds et ont disparu en quelques minutes. Le récap WhatsApp était très pratique.',
   },
   {
     name: 'Carine T.',
     en: 'The crepes were soft, pretty and perfect for our brunch box. I loved the packaging.',
-    fr: 'Les crepes etaient moelleuses, jolies et parfaites pour notre brunch. J’ai adore le packaging.',
+    fr: 'Les crêpes étaient moelleuses, jolies et parfaites pour notre brunch. J’ai adoré le packaging.',
   },
   {
     name: 'Joel A.',
     en: 'We ordered mini burgers for a birthday and the quantity guidance was spot on.',
-    fr: 'Nous avons commande des mini burgers pour un anniversaire et les quantites conseillees etaient parfaites.',
+    fr: 'Nous avons commandé des mini burgers pour un anniversaire et les quantités conseillées étaient parfaites.',
   },
   {
     name: 'Melissa F.',
     en: 'Custom order was smooth from the first message. Everything tasted homemade and premium.',
-    fr: 'La commande sur mesure a ete simple des le premier message. Tout avait un vrai gout maison et premium.',
+    fr: 'La commande sur mesure a été simple dès le premier message. Tout avait un vrai goût maison et premium.',
   },
 ];
 
@@ -385,7 +391,7 @@ export const faqCopy = [
     },
     answer: {
       en: 'No. The site prepares your order and opens WhatsApp so you can confirm directly.',
-      fr: 'Non. Le site prepare votre commande et ouvre WhatsApp pour confirmer directement.',
+      fr: 'Non. Le site prépare votre commande et ouvre WhatsApp pour confirmer directement.',
     },
   },
   {
@@ -395,7 +401,7 @@ export const faqCopy = [
     },
     answer: {
       en: 'Yes. The message is pre-filled, so you can edit it before sending.',
-      fr: 'Oui. Le message est pre-rempli, vous pouvez donc le modifier avant de l’envoyer.',
+      fr: 'Oui. Le message est prérempli, vous pouvez donc le modifier avant de l’envoyer.',
     },
   },
   {
@@ -405,7 +411,7 @@ export const faqCopy = [
     },
     answer: {
       en: 'Custom event orders start from 30 pieces.',
-      fr: 'Les commandes evenementielles sur mesure commencent a partir de 30 pieces.',
+      fr: 'Les commandes événementielles sur mesure commencent à partir de 30 pièces.',
     },
   },
   {
@@ -415,7 +421,7 @@ export const faqCopy = [
     },
     answer: {
       en: 'Same-day availability depends on the menu. Larger orders are best discussed at least 24 hours ahead.',
-      fr: 'La disponibilite le jour meme depend du menu. Pour les grandes commandes, mieux vaut echanger au moins 24 h avant.',
+      fr: 'La disponibilité le jour même dépend du menu. Pour les grandes commandes, mieux vaut échanger au moins 24 h avant.',
     },
   },
 ];

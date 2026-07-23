@@ -3,13 +3,11 @@ import { useCart } from '../context/CartContext';
 import { useLanguage } from '../context/LanguageContext';
 import type { Product, ProductVariant } from '../types';
 import { formatMoney } from '../utils/money';
-import { ImageGallery } from './ImageGallery';
-import { Minus, Plus, ZoomIn } from './icons';
+import { Minus, Plus } from './icons';
 
 export function ProductCard({ product }: { product: Product }) {
   const [selectedVariantId, setSelectedVariantId] = useState(product.variants[0]?.id);
   const [quantity, setQuantity] = useState(0);
-  const [isGalleryOpen, setGalleryOpen] = useState(false);
   const [isFlying, setFlying] = useState(false);
   const { addItem } = useCart();
   const { productText, t, variantText } = useLanguage();
@@ -44,22 +42,14 @@ export function ProductCard({ product }: { product: Product }) {
   return (
     <article className="food-card relative overflow-hidden rounded-2xl bg-white shadow-soft">
       {isFlying ? <span className="fly-dot absolute right-7 top-7 z-20 h-4 w-4 rounded-full bg-caramel" /> : null}
-      <button
-        type="button"
-        onClick={() => setGalleryOpen(true)}
-        className="group relative aspect-[4/3] w-full overflow-hidden"
-        aria-label={`${t('galleryOpen')}: ${copy.name}`}
-      >
+      <div className="relative aspect-[4/3] w-full overflow-hidden">
         <img
           src={product.images[0]}
           alt={copy.name}
-          className="h-full w-full object-cover transition duration-300 group-hover:scale-105"
+          className="h-full w-full object-cover"
           loading="lazy"
         />
-        <span className="absolute right-3 top-3 inline-flex h-9 w-9 items-center justify-center rounded-full bg-white/95 text-cocoa shadow-soft">
-          <ZoomIn className="h-4 w-4" />
-        </span>
-      </button>
+      </div>
 
       <div className="p-4">
         <div className="flex items-start justify-between gap-3">
@@ -121,13 +111,6 @@ export function ProductCard({ product }: { product: Product }) {
           </button>
         </div>
       </div>
-
-      <ImageGallery
-        title={copy.name}
-        images={product.images}
-        isOpen={isGalleryOpen}
-        onClose={() => setGalleryOpen(false)}
-      />
     </article>
   );
 }
