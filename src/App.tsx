@@ -12,6 +12,7 @@ import { MenuSection } from './components/MenuSection';
 import { ReviewsSection } from './components/ReviewsSection';
 import { WhatsAppFloatingButton } from './components/WhatsAppFloatingButton';
 import { BottomNav } from './components/BottomNav';
+import { UpdatePrompt } from './components/UpdatePrompt';
 
 function AppContent() {
   const { t } = useLanguage();
@@ -50,6 +51,7 @@ function AppContent() {
         <WhatsAppFloatingButton />
         <FloatingCart />
         <InstallPrompt />
+        <UpdatePrompt />
         <BottomNav />
       </div>
     </CartProvider>
